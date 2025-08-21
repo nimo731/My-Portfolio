@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { motion } from 'framer-motion';
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
@@ -8,16 +9,11 @@ function App() {
       {/* Navigation */}
       <nav className="fixed w-full bg-secondary/80 backdrop-blur-sm z-50">
         <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <motion.h1 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="text-2xl font-bold text-primary"
-            >
-              Patience Karanja
-            </motion.h1>
+          <div className="flex justify-between items-center">
+            <a href="#" className="text-2xl font-bold text-primary">PK</a>
             <div className="hidden md:flex space-x-8">
               <a href="#about" className="hover:text-primary transition-colors">About</a>
+              <a href="#experience" className="hover:text-primary transition-colors">Experience</a>
               <a href="#projects" className="hover:text-primary transition-colors">Projects</a>
               <a href="#skills" className="hover:text-primary transition-colors">Skills</a>
               <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
@@ -70,15 +66,20 @@ function App() {
             <p className="text-xl md:text-2xl mb-8 text-gray-300">
               A passionate Full Stack Developer crafting beautiful digital experiences
             </p>
-            <div className="flex justify-center space-x-6">
-              <a href="https://github.com/nimo731" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary transition-colors">
-                <FaGithub />
-              </a>
-              <a href="https://linkedin.com/in/patience-karanja" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary transition-colors">
-                <FaLinkedin />
-              </a>
-              <a href="mailto:patiencekaranja@gmail.com" className="text-2xl hover:text-primary transition-colors">
-                <FaEnvelope />
+            <div className="flex flex-col items-center space-y-6">
+              <div className="flex space-x-6">
+                <a href="https://github.com/nimo731" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary transition-colors">
+                  <FaGithub />
+                </a>
+                <a href="https://linkedin.com/in/patience-karanja" target="_blank" rel="noopener noreferrer" className="text-2xl hover:text-primary transition-colors">
+                  <FaLinkedin />
+                </a>
+                <a href="mailto:patiencekaranja@gmail.com" className="text-2xl hover:text-primary transition-colors">
+                  <FaEnvelope />
+                </a>
+              </div>
+              <a href="#projects" className="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full transition-colors duration-300">
+                View My Work
               </a>
             </div>
           </motion.div>
@@ -91,18 +92,43 @@ function App() {
           <h2 className="text-3xl font-bold mb-8 text-center">About Me</h2>
           <div className="max-w-3xl mx-auto text-gray-300">
             <p className="mb-4">
-              I'm a passionate Full Stack Developer based in Nairobi, currently studying at Moringa School. 
+              I'm a passionate Full Stack Developer based in Nairobi and a graduate of Moringa School. 
               I love turning ideas into functional, beautiful digital experiences.
             </p>
             <p className="mb-4">
-              My journey in tech has equipped me with skills in HTML, CSS, JavaScript, React, Python, and SQL. 
+              I completed the Software Engineering program at Moringa School, and my journey in tech has equipped me with skills in HTML, CSS, JavaScript, React, Python, and SQL. 
               I'm particularly proud of my work on the Fit Me app, where I collaborated with a team to create 
               something impactful.
             </p>
             <p>
-              When I'm not coding, you can find me dreaming about cars - I'm manifesting my journey to own a 
-              Range Rover Evoque, Audi Q5, or Volvo XC40 in the next four years!
+              When I'm not coding, you can find me dreaming about cars 
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20 px-6">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <motion.div whileHover={{ y: -6 }} className="bg-secondary/50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-primary mb-2">AutoCare Pro</h3>
+              <p className="text-gray-300 mb-3">Full‑stack Developer</p>
+              <p className="text-gray-300 mb-4">Built RESTful backend APIs with Node.js/Express and integrated MongoDB, and implemented responsive React UI components.</p>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">React</span>
+                <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Node.js</span>
+                <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Express</span>
+                <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">MongoDB</span>
+              </div>
+            </motion.div>
+
+            <motion.div whileHover={{ y: -6 }} className="bg-secondary/50 p-6 rounded-lg">
+              <h3 className="text-xl font-bold text-primary mb-2">Fit Me App</h3>
+              <p className="text-gray-300 mb-3">Front‑end Developer</p>
+              <p className="text-gray-300">Developed user interfaces and component architecture with React; collaborated on feature design and polish.</p>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -148,21 +174,30 @@ function App() {
               </div>
             </motion.div>
 
-            {/* Gospel Platform */}
+            {/* AutoCare Pro */}
             <motion.div
               whileHover={{ y: -10 }}
               className="bg-secondary/50 rounded-lg overflow-hidden"
             >
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-primary">Gospel Platform</h3>
+                <h3 className="text-xl font-bold mb-2 text-primary">AutoCare Pro</h3>
                 <p className="text-gray-300 mb-4">
-                  A platform dedicated to sharing and celebrating gospel content.
+                  A vehicle service management platform. Contributed across the stack: built backend APIs with Node.js/Express and developed responsive React UI.
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">React</span>
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Node.js</span>
+                  <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">Express</span>
                   <span className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm">MongoDB</span>
                 </div>
+                <a
+                  href="https://github.com/Evian1k/VeloManage-Clean4"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block text-primary hover:text-primary/80 underline"
+                >
+                  View Repo
+                </a>
               </div>
             </motion.div>
           </div>
