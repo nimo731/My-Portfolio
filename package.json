@@ -1,0 +1,8 @@
+{
+  "name": "patience-portfolio",
+  "version": "1.0.0",
+  "description": "Patience Karanja's Portfolio",
+  "scripts": {
+    "build": "echo 'Static site - no build needed'"
+  }
+} 
